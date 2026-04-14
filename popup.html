@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8" />
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 12px;
+      width: 260px;
+      color: #1f2937;
+    }
+
+    strong {
+      display: block;
+      margin-bottom: 10px;
+    }
+
+    label {
+      display: block;
+      font-size: 12px;
+      margin: 8px 0 4px;
+    }
+
+    input,
+    button {
+      box-sizing: border-box;
+      width: 100%;
+      padding: 8px;
+      border-radius: 6px;
+    }
+
+    input {
+      border: 1px solid #cbd5e1;
+    }
+
+    button {
+      border: 0;
+      margin-top: 8px;
+      cursor: pointer;
+      color: #fff;
+      background: #2563eb;
+    }
+
+    button.secondary {
+      background: #475569;
+    }
+
+    .status {
+      margin-top: 10px;
+      font-size: 12px;
+      min-height: 18px;
+    }
+
+    .meta {
+      font-size: 11px;
+      color: #64748b;
+      margin-top: 8px;
+      line-height: 1.4;
+    }
+  </style>
+</head>
+<body>
+  <strong>Activate Extension</strong>
+
+  <label for="sitePattern">Site URL or pattern</label>
+  <input id="sitePattern" placeholder="https://example.com/*" />
+
+  <label for="license">License code</label>
+  <input id="license" placeholder="License code" />
+
+  <button id="activate">Activate</button>
+  <button class="secondary" id="toggle" type="button">Turn Off</button>
+
+  <div class="status" id="status"></div>
+  <div class="meta" id="meta"></div>
+
+  <script src="popup.js"></script>
+</body>
+</html>

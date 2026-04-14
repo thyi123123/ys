@@ -1,0 +1,24 @@
+{
+  "manifest_version": 3,
+  "name": "Daily Date Jumper (Licensed)",
+  "version": "23.0",
+  "permissions": ["storage"],
+  "host_permissions": [
+    "<all_urls>",
+    "https://firestore.googleapis.com/*"
+  ],
+  "action": {
+    "default_title": "License / Toggle",
+    "default_popup": "popup.html"
+  },
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"],
+      "run_at": "document_idle"
+    }
+  ]
+}
